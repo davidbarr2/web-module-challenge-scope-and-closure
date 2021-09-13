@@ -28,11 +28,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    The count for counter2 is a global variable, whereas for counter1 it is a private variable.
   
   2. Which of the two uses a closure? How can you tell?
+      counter2 uses a closure because count is not defined within the function that increments it.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     counter1 would be preferable if we have multiple count that we want to keep track of. counter2 would be better for accessing the variable in other areas of the app.
 */
 
 // counter1 code
@@ -62,10 +65,12 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random()*3)
 }
 
+console.log(inning())
+console.log(inning())
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
 Use the finalScore function below to do the following:

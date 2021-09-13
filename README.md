@@ -59,6 +59,7 @@ You will be running your tests in one terminal and debugging in the other. As yo
 Edit the `ReadMe` file with your answers to the questions below.
 
 1. In your own words, define closure (1-2 sentences).
+  Closure is when a function goes to its outer scope to grab a value defined elsewhere.
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -80,8 +81,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+    The function returned by personalDice that returns a name and number uses closure to grab the name. We know because name is not defined within the function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+    Dan's name will be the same, the dice roll will change.
+
 c. What is the lexical scope of `newRoll`? 
+  newRoll only exists within the function returned by personalDice. Since it is only logged to the console its results cannot be accessed anywhere else.
 
 
 ### Task 3 - Stretch Goals
